@@ -33,7 +33,7 @@ Este proyecto implementa un sistema de síntesis de voz basado en modelos neuron
 * Streaming de audio en tiempo real (low latency)
 * Soporte para SSML (Speech Synthesis Markup Language)
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                |
 | -------- | -------------------------- |
@@ -61,7 +61,7 @@ Pipeline completo de procesamiento de audio que integra reconocimiento de voz au
 * Procesamiento batch o streaming
 * Integración con LLMs para traducción contextual
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                  |
 | -------- | ---------------------------- |
@@ -90,7 +90,7 @@ Sistema de reconocimiento óptico de caracteres que permite extraer texto estruc
 * Layout analysis (estructura del documento)
 * Procesamiento remoto vía URL
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                  |
 | -------- | ---------------------------- |
@@ -118,7 +118,7 @@ Sistema híbrido de detección de objetos que combina inferencia en la nube y ej
 * Procesamiento en tiempo real con OpenCV
 * Auto-etiquetado de datasets (pseudo-labeling)
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción               |
 | -------- | ------------------------- |
@@ -146,7 +146,7 @@ Clasificador de texto basado en técnicas clásicas de machine learning para det
 * Pipeline reproducible con sklearn
 * Evaluación con métricas estándar
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                    |
 | -------- | ------------------------------ |
@@ -174,7 +174,7 @@ API que automatiza la generación de casos de prueba, validacion de los casos de
 * Validación automática
 * Ciclos de mejora iterativa
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                   |
 | -------- | ----------------------------- |
@@ -202,7 +202,7 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 * Generación de artefactos de software
 * Persistencia en Azure
 
-### 📌 Mini documentación
+### 📌 Documentación
 
 | Elemento | Descripción                                 |
 | -------- | ------------------------------------------- |
