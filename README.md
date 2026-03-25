@@ -161,11 +161,11 @@ Clasificador de texto basado en técnicas clásicas de machine learning para det
 
 ## 🧪 6. AI Test Case Generator
 
-API que automatiza la generación de casos de prueba utilizando modelos de lenguaje.
+API que automatiza la generación de casos de prueba, validacion de los casos de pruebas y la creacion de los script de prueba automatizada utilizando agentes AI.
 
 ### 🔧 Arquitectura
 
-* Input (requerimiento) → LLM → Generación → Validación → Iteración
+* Input (requerimiento) → LLM → Generación → Validación → Creacion de scripts
 
 ### ⚙️ Características técnicas
 
@@ -183,7 +183,7 @@ API que automatiza la generación de casos de prueba utilizando modelos de lengu
 | Paso 1   | Recepción del requerimiento   |
 | Paso 2   | Generación con LLM            |
 | Paso 3   | Validación                    |
-| Paso 4   | Corrección iterativa          |
+| Paso 4   | Creacion de scripts automatizados         |
 
 ---
 
