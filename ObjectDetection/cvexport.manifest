@@ -1,0 +1,13 @@
+{
+  "DomainType": "ObjectDetection",
+  "Platform": "ONNX",
+  "Flavor": null,
+  "ExporterVersion": "2.0",
+  "ExportedDate": "2025-11-17T14:47:28.4395665Z",
+  "IterationId": "c551d4c4-c598-4a1e-ab38-937ed0b51c31",
+  "ModelFileName": "model.onnx",
+  "LabelFileName": "labels.txt",
+  "MetadataPropsFileName": "metadata_properties.json",
+  "ModelFileSHA1": "98b989662d586bc7ca8d8ef62034053c21dd8417",
+  "SchemaVersion": "1.0"
+}
