@@ -215,6 +215,120 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 
 ---
 
+Modelos y Experimentos de Deep Learning
+
+Esta sección describe implementaciones fundamentales de modelos de deep learning desarrollados como base para los sistemas del portafolio. Estos componentes demuestran dominio de arquitecturas neuronales, entrenamiento de modelos y técnicas avanzadas de optimización.
+
+8. Clasificador de Texto con LSTM (NLP)
+
+Implementación de un modelo de procesamiento de lenguaje natural basado en redes neuronales recurrentes (LSTM) para clasificación de sentimiento en texto.
+
+Descripción técnica
+
+En este módulo se construye un pipeline completo de NLP que incluye tokenización, construcción de vocabulario y entrenamiento de un modelo secuencial. Se utiliza torchtext para la gestión de datos y spaCy para la tokenización, permitiendo un flujo estructurado desde texto crudo hasta embeddings.
+
+El modelo utiliza una capa de Embedding + LSTM, seguida de regularización con dropout y una capa fully connected para clasificación binaria.
+
+Lo que hago en este archivo
+Implemento tokenización y normalización de texto usando spaCy
+Construyo el vocabulario dinámico a partir del dataset
+Diseño una arquitectura LSTM para clasificación de sentimientos
+Entreno el modelo con BCEWithLogitsLoss y optimización Adam
+Evalúo el modelo en dataset de test
+Implemento inferencia sobre texto libre (predicción en producción)
+
+📄 Archivo:
+
+9. Clasificación de Imágenes con Red Neuronal Feedforward (MNIST)
+
+Modelo base de deep learning para clasificación de dígitos utilizando el dataset MNIST.
+
+Descripción técnica
+
+Se implementa una red neuronal fully connected (MLP) que procesa imágenes transformadas a vectores. Este módulo demuestra el flujo completo de entrenamiento: carga de datos, batching, forward/backward pass y persistencia del modelo.
+
+Lo que hago en este archivo
+Preprocesamiento de imágenes con ToTensor()
+División del dataset en entrenamiento, validación y prueba
+Diseño de una red neuronal densa (MLP)
+Implementación manual del loop de entrenamiento
+Cálculo de métricas de exactitud
+Serialización del modelo (.pth)
+Generación de input estructurado para integración con APIs
+
+📄 Archivo:
+
+10. Clasificación de Imágenes con CNN (CIFAR-10)
+
+Implementación de una red neuronal convolucional para clasificación de imágenes en múltiples clases.
+
+Descripción técnica
+
+Este modelo aplica una arquitectura CNN con múltiples bloques convolucionales, max pooling y dropout, optimizada para clasificación en el dataset CIFAR-10. Se ejecuta entrenamiento en GPU cuando está disponible.
+
+Lo que hago en este archivo
+Normalización de imágenes RGB
+Construcción de arquitectura CNN (Conv + ReLU + Pooling)
+Regularización mediante dropout
+Implementación de entrenamiento y validación
+Uso de GPU para acelerar entrenamiento
+Visualización de predicciones sobre imágenes reales
+
+📄 Archivo:
+
+11. Modelos Secuenciales: RNN, LSTM y GRU
+
+Implementación comparativa de arquitecturas recurrentes para predicción de secuencias de texto.
+
+Descripción técnica
+
+Este módulo demuestra el funcionamiento interno de modelos secuenciales mediante la predicción de la siguiente palabra en una frase. Se implementan tres variantes: RNN básica, LSTM y GRU, permitiendo comparar su comportamiento y capacidad de memoria.
+
+Lo que hago en este archivo
+Construyo un vocabulario manual y codificación de tokens
+Transformo secuencias de texto en tensores
+Implemento desde cero tres arquitecturas recurrentes:
+RNN básica
+LSTM
+GRU
+Diseño el forward pass para predicción de secuencia
+Comparo enfoques de modelado secuencial
+
+📄 Archivo:
+
+12. Técnicas de Regularización en Deep Learning
+
+Implementación práctica de estrategias para mejorar la generalización de modelos.
+
+Descripción técnica
+
+Se exploran múltiples técnicas de regularización aplicadas a redes neuronales, abordando overfitting y estabilidad del entrenamiento.
+
+Lo que hago en este archivo
+Implemento Dropout para evitar co-adaptación de neuronas
+Integro Batch Normalization para estabilizar activaciones
+Aplico L2 Regularization (weight decay) desde el optimizador
+Simulo Early Stopping basado en validación
+Aplico Data Augmentation para enriquecer datasets de imágenes
+
+📄 Archivo:
+
+13. Transfer Learning con ResNet (Deep Learning avanzado)
+
+Implementación de transferencia de aprendizaje utilizando modelos preentrenados.
+
+Descripción técnica
+
+Se utiliza ResNet18 preentrenado en ImageNet como extractor de características, adaptándolo a un nuevo problema (CIFAR-10) mediante fine-tuning parcial.
+
+Lo que hago en este archivo
+Cargo un modelo preentrenado (ResNet18)
+Congelo capas para usar feature extraction
+Reemplazo la capa final para clasificación personalizada
+Entreno únicamente la capa fully connected
+Ajusto imágenes al formato requerido por el modelo
+Evalúo predicciones sobre datos reales
+
 #  Stack Tecnológico
 
 * Python
