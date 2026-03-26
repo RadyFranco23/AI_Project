@@ -215,119 +215,186 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 
 ---
 
-Modelos y Experimentos de Deep Learning
+## 8. Clasificador de Texto con LSTM (NLP)
 
-Esta sección describe implementaciones fundamentales de modelos de deep learning desarrollados como base para los sistemas del portafolio. Estos componentes demuestran dominio de arquitecturas neuronales, entrenamiento de modelos y técnicas avanzadas de optimización.
+Implementación de un modelo de procesamiento de lenguaje natural basado en redes neuronales recurrentes (LSTM) para clasificación de sentimientos en texto.
 
-8. Clasificador de Texto con LSTM (NLP)
+###  Arquitectura
 
-Implementación de un modelo de procesamiento de lenguaje natural basado en redes neuronales recurrentes (LSTM) para clasificación de sentimiento en texto.
+Texto → Tokenización (spaCy) → Embedding → LSTM → Fully Connected → Predicción
 
-Descripción técnica
+###  Características técnicas
 
-En este módulo se construye un pipeline completo de NLP que incluye tokenización, construcción de vocabulario y entrenamiento de un modelo secuencial. Se utiliza torchtext para la gestión de datos y spaCy para la tokenización, permitiendo un flujo estructurado desde texto crudo hasta embeddings.
+* Tokenización y normalización de texto con spaCy
+* Construcción de vocabulario dinámico con torchtext
+* Uso de embeddings entrenables
+* Arquitectura LSTM para modelado secuencial
+* Regularización con Dropout
+* Entrenamiento con BCEWithLogitsLoss
 
-El modelo utiliza una capa de Embedding + LSTM, seguida de regularización con dropout y una capa fully connected para clasificación binaria.
+###  Documentación
 
-Lo que hago en este archivo
-Implemento tokenización y normalización de texto usando spaCy
-Construyo el vocabulario dinámico a partir del dataset
-Diseño una arquitectura LSTM para clasificación de sentimientos
-Entreno el modelo con BCEWithLogitsLoss y optimización Adam
-Evalúo el modelo en dataset de test
-Implemento inferencia sobre texto libre (predicción en producción)
+| Elemento | Descripción                         |
+| -------- | ----------------------------------- |
+| Input    | Texto                               |
+| Output   | Clasificación (Positivo / Negativo) |
+| Paso 1   | Tokenización del texto              |
+| Paso 2   | Conversión a índices (vocabulario)  |
+| Paso 3   | Embedding + LSTM                    |
+| Paso 4   | Clasificación final                 |
 
-📄 Archivo:
+---
 
-9. Clasificación de Imágenes con Red Neuronal Feedforward (MNIST)
+## 9. Clasificación de Imágenes (MNIST - MLP)
 
-Modelo base de deep learning para clasificación de dígitos utilizando el dataset MNIST.
+Modelo base de deep learning para clasificación de dígitos escritos a mano utilizando una red neuronal completamente conectada.
 
-Descripción técnica
+###  Arquitectura
 
-Se implementa una red neuronal fully connected (MLP) que procesa imágenes transformadas a vectores. Este módulo demuestra el flujo completo de entrenamiento: carga de datos, batching, forward/backward pass y persistencia del modelo.
+Imagen (28x28) → Flatten → Red neuronal (MLP) → Predicción
 
-Lo que hago en este archivo
-Preprocesamiento de imágenes con ToTensor()
-División del dataset en entrenamiento, validación y prueba
-Diseño de una red neuronal densa (MLP)
-Implementación manual del loop de entrenamiento
-Cálculo de métricas de exactitud
-Serialización del modelo (.pth)
-Generación de input estructurado para integración con APIs
+###  Características técnicas
 
-📄 Archivo:
+* Preprocesamiento con ToTensor
+* División de dataset (train/val/test)
+* Red neuronal fully connected (MLP)
+* Entrenamiento con CrossEntropyLoss
+* Optimización con SGD
+* Persistencia del modelo (.pth)
 
-10. Clasificación de Imágenes con CNN (CIFAR-10)
+###  Documentación
 
-Implementación de una red neuronal convolucional para clasificación de imágenes en múltiples clases.
+| Elemento | Descripción             |
+| -------- | ----------------------- |
+| Input    | Imagen (28x28)          |
+| Output   | Dígito (0–9)            |
+| Paso 1   | Vectorización de imagen |
+| Paso 2   | Forward pass (MLP)      |
+| Paso 3   | Cálculo de pérdida      |
+| Paso 4   | Actualización de pesos  |
 
-Descripción técnica
+---
 
-Este modelo aplica una arquitectura CNN con múltiples bloques convolucionales, max pooling y dropout, optimizada para clasificación en el dataset CIFAR-10. Se ejecuta entrenamiento en GPU cuando está disponible.
+## 10. Clasificación de Imágenes con CNN (CIFAR-10)
 
-Lo que hago en este archivo
-Normalización de imágenes RGB
-Construcción de arquitectura CNN (Conv + ReLU + Pooling)
-Regularización mediante dropout
-Implementación de entrenamiento y validación
-Uso de GPU para acelerar entrenamiento
-Visualización de predicciones sobre imágenes reales
+Sistema de clasificación de imágenes utilizando redes neuronales convolucionales profundas.
 
-📄 Archivo:
+###  Arquitectura
 
-11. Modelos Secuenciales: RNN, LSTM y GRU
+Imagen RGB → Convoluciones → Pooling → Flatten → Fully Connected → Predicción
+
+###  Características técnicas
+
+* Normalización de imágenes RGB
+* Arquitectura CNN con múltiples capas convolucionales
+* MaxPooling para reducción de dimensionalidad
+* Dropout para regularización
+* Entrenamiento en GPU (CUDA)
+* Evaluación con métricas de exactitud
+
+###  Documentación
+
+| Elemento | Descripción                  |
+| -------- | ---------------------------- |
+| Input    | Imagen RGB                   |
+| Output   | Clase (10 categorías)        |
+| Paso 1   | Preprocesamiento             |
+| Paso 2   | Extracción de features (CNN) |
+| Paso 3   | Clasificación                |
+| Paso 4   | Evaluación                   |
+
+---
+
+## 11. Modelos Secuenciales (RNN, LSTM, GRU)
 
 Implementación comparativa de arquitecturas recurrentes para predicción de secuencias de texto.
 
-Descripción técnica
+###  Arquitectura
 
-Este módulo demuestra el funcionamiento interno de modelos secuenciales mediante la predicción de la siguiente palabra en una frase. Se implementan tres variantes: RNN básica, LSTM y GRU, permitiendo comparar su comportamiento y capacidad de memoria.
+Secuencia de palabras → Embedding → RNN/LSTM/GRU → Fully Connected → Predicción
 
-Lo que hago en este archivo
-Construyo un vocabulario manual y codificación de tokens
-Transformo secuencias de texto en tensores
-Implemento desde cero tres arquitecturas recurrentes:
-RNN básica
-LSTM
-GRU
-Diseño el forward pass para predicción de secuencia
-Comparo enfoques de modelado secuencial
+###  Características técnicas
 
-📄 Archivo:
+* Construcción manual de vocabulario
+* Codificación de texto a tensores
+* Implementación de tres arquitecturas:
 
-12. Técnicas de Regularización en Deep Learning
+  * RNN básica
+  * LSTM
+  * GRU
+* Modelado de dependencias temporales
+* Predicción de la siguiente palabra
 
-Implementación práctica de estrategias para mejorar la generalización de modelos.
+###  Documentación
 
-Descripción técnica
+| Elemento | Descripción              |
+| -------- | ------------------------ |
+| Input    | Secuencia de palabras    |
+| Output   | Siguiente palabra        |
+| Paso 1   | Tokenización manual      |
+| Paso 2   | Conversión a índices     |
+| Paso 3   | Procesamiento secuencial |
+| Paso 4   | Predicción final         |
 
-Se exploran múltiples técnicas de regularización aplicadas a redes neuronales, abordando overfitting y estabilidad del entrenamiento.
+---
 
-Lo que hago en este archivo
-Implemento Dropout para evitar co-adaptación de neuronas
-Integro Batch Normalization para estabilizar activaciones
-Aplico L2 Regularization (weight decay) desde el optimizador
-Simulo Early Stopping basado en validación
-Aplico Data Augmentation para enriquecer datasets de imágenes
+## 12. Técnicas de Regularización
 
-📄 Archivo:
+Implementación de diferentes estrategias para mejorar la generalización de modelos y evitar overfitting.
 
-13. Transfer Learning con ResNet (Deep Learning avanzado)
+###  Arquitectura
 
-Implementación de transferencia de aprendizaje utilizando modelos preentrenados.
+Dataset → Modelo → Regularización → Entrenamiento → Evaluación
 
-Descripción técnica
+###  Características técnicas
 
-Se utiliza ResNet18 preentrenado en ImageNet como extractor de características, adaptándolo a un nuevo problema (CIFAR-10) mediante fine-tuning parcial.
+* Dropout (apagado aleatorio de neuronas)
+* Batch Normalization
+* L2 Regularization (weight decay)
+* Early Stopping basado en validación
+* Data Augmentation para imágenes
 
-Lo que hago en este archivo
-Cargo un modelo preentrenado (ResNet18)
-Congelo capas para usar feature extraction
-Reemplazo la capa final para clasificación personalizada
-Entreno únicamente la capa fully connected
-Ajusto imágenes al formato requerido por el modelo
-Evalúo predicciones sobre datos reales
+###  Documentación
+
+| Elemento | Descripción                |
+| -------- | -------------------------- |
+| Input    | Dataset                    |
+| Output   | Modelo regularizado        |
+| Paso 1   | Aplicación de técnicas     |
+| Paso 2   | Entrenamiento              |
+| Paso 3   | Monitoreo de validación    |
+| Paso 4   | Selección del mejor modelo |
+
+---
+
+## 13. Transfer Learning (ResNet)
+
+Implementación de transferencia de aprendizaje utilizando un modelo preentrenado para clasificación de imágenes.
+
+###  Arquitectura
+
+Imagen → ResNet preentrenada → Fine-tuning → Predicción
+
+###  Características técnicas
+
+* Uso de ResNet18 preentrenado (ImageNet)
+* Congelación de capas (feature extraction)
+* Reemplazo de la capa fully connected
+* Entrenamiento parcial del modelo
+* Adaptación de input (resize a 224x224)
+
+###  Documentación
+
+| Elemento | Descripción            |
+| -------- | ---------------------- |
+| Input    | Imagen                 |
+| Output   | Clase (10 categorías)  |
+| Paso 1   | Preprocesamiento       |
+| Paso 2   | Extracción de features |
+| Paso 3   | Fine-tuning            |
+| Paso 4   | Predicción             |
+
+---
 
 #  Stack Tecnológico
 
@@ -371,4 +438,4 @@ Este portafolio demuestra experiencia en:
 #  Autor
 
 Radi Franco
-
+Ai Engineer
