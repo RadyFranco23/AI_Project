@@ -1,4 +1,4 @@
-# 🚀 AI Projects Portfolio
+#  AI Projects Portfolio
 
 Este repositorio consolida una colección de proyectos avanzados de Inteligencia Artificial aplicados a problemas reales dentro del desarrollo de software moderno. Cada módulo está diseñado bajo principios de *AI Engineering*, combinando modelos de machine learning, arquitecturas cloud-native y patrones de diseño orientados a producción.
 
@@ -6,34 +6,34 @@ El objetivo principal es demostrar la capacidad de diseñar, implementar y despl
 
 ---
 
-## 🧠 Áreas cubiertas
+##  Áreas cubiertas
 
-* 🎙️ Speech Processing (ASR / TTS)
-* 🖼️ Computer Vision
-* 🧠 Natural Language Processing (NLP)
-* 🧪 Automatización de QA con IA
-* 🏗️ Sistemas multi-agente
+*  Speech Processing (ASR / TTS)
+*  Computer Vision
+*  Natural Language Processing (NLP)
+*  Automatización de QA con IA
+*  Sistemas multi-agente
 
 ---
 
-# 📂 Proyectos
+#  Proyectos
 
 ## 🎙️ 1. Neural Text-to-Speech (Azure AI)
 
 Este proyecto implementa un sistema de síntesis de voz basado en modelos neuronales proporcionados por Azure Cognitive Services. El sistema permite transformar texto en audio con alta naturalidad, controlando aspectos como entonación, velocidad y estilo mediante SSML.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Cliente → API backend → Azure TTS → Stream de audio
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Uso de *Neural Voices (WaveNet / Transformer-based)*
 * Configuración mediante variables de entorno seguras
 * Streaming de audio en tiempo real (low latency)
 * Soporte para SSML (Speech Synthesis Markup Language)
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                |
 | -------- | -------------------------- |
@@ -46,22 +46,22 @@ Este proyecto implementa un sistema de síntesis de voz basado en modelos neuron
 
 ---
 
-## 🎧 2. Speech-to-Text + Translation Pipeline
+##  2. Speech-to-Text + Translation Pipeline
 
 Pipeline completo de procesamiento de audio que integra reconocimiento de voz automático (ASR) con traducción automática basada en modelos de lenguaje.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Ingesta de audio → Whisper (ASR) → Post-procesamiento → Azure OpenAI → Traducción
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Modelos *encoder-decoder* para ASR
 * Normalización de audio (sample rate, noise handling)
 * Procesamiento batch o streaming
 * Integración con LLMs para traducción contextual
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                  |
 | -------- | ---------------------------- |
@@ -75,22 +75,22 @@ Pipeline completo de procesamiento de audio que integra reconocimiento de voz au
 
 ---
 
-## 🖼️ 3. OCR con Azure Vision
+##  3. OCR con Azure Vision
 
 Sistema de reconocimiento óptico de caracteres que permite extraer texto estructurado desde imágenes o documentos.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Input (imagen/URL) → Azure Vision API → Parsing estructural → Output JSON
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Detección de texto por líneas y palabras
 * Bounding boxes con coordenadas
 * Layout analysis (estructura del documento)
 * Procesamiento remoto vía URL
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                  |
 | -------- | ---------------------------- |
@@ -103,22 +103,22 @@ Sistema de reconocimiento óptico de caracteres que permite extraer texto estruc
 
 ---
 
-## 🎯 4. Object Detection (Azure + ONNX)
+##  4. Object Detection (Azure + ONNX)
 
 Sistema híbrido de detección de objetos que combina inferencia en la nube y ejecución local optimizada.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Video stream → Frame extraction → Modelo (Azure / ONNX) → Post-procesamiento → Visualización
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Modelos YOLO/SSD/Faster R-CNN
 * Inferencia local con ONNX Runtime
 * Procesamiento en tiempo real con OpenCV
 * Auto-etiquetado de datasets (pseudo-labeling)
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción               |
 | -------- | ------------------------- |
@@ -131,22 +131,22 @@ Sistema híbrido de detección de objetos que combina inferencia en la nube y ej
 
 ---
 
-## 📧 5. Spam Detector (Machine Learning)
+##  5. Spam Detector (Machine Learning)
 
 Clasificador de texto basado en técnicas clásicas de machine learning para detección de spam.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Input texto → Vectorización → Modelo Naive Bayes → Predicción
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Bag of Words / TF-IDF
 * Modelo probabilístico (Multinomial Naive Bayes)
 * Pipeline reproducible con sklearn
 * Evaluación con métricas estándar
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                    |
 | -------- | ------------------------------ |
@@ -159,22 +159,22 @@ Clasificador de texto basado en técnicas clásicas de machine learning para det
 
 ---
 
-## 🧪 6. AI Test Case Generator
+##  6. AI Test Case Generator
 
 API que automatiza la generación de casos de prueba, validacion de los casos de pruebas y la creacion de los script de prueba automatizada utilizando agentes AI.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Input (requerimiento) → LLM → Generación → Validación → Creacion de scripts
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Prompt engineering avanzado
 * Generación estructurada de test cases
 * Validación automática
 * Ciclos de mejora iterativa
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                   |
 | -------- | ----------------------------- |
@@ -187,22 +187,22 @@ API que automatiza la generación de casos de prueba, validacion de los casos de
 
 ---
 
-## 🧠 7. AI Software Factory (Multi-Agent System)
+##  7. AI Software Factory (Multi-Agent System)
 
 Sistema basado en agentes inteligentes que automatiza la transformación de requerimientos en artefactos de desarrollo.
 
-### 🔧 Arquitectura
+###  Arquitectura
 
 * Input → Agente planner → DAG de tareas → Agentes ejecutores → Persistencia
 
-### ⚙️ Características técnicas
+###  Características técnicas
 
 * Sistemas multi-agente
 * Orquestación basada en grafos (DAG)
 * Generación de artefactos de software
 * Persistencia en Azure
 
-### 📌 Documentación
+###  Documentación
 
 | Elemento | Descripción                                 |
 | -------- | ------------------------------------------- |
@@ -215,7 +215,7 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 
 ---
 
-# 🛠️ Stack Tecnológico
+#  Stack Tecnológico
 
 * Python
 * TypeScript / NestJS
@@ -231,7 +231,7 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 
 ---
 
-# 💡 Enfoque
+#  Enfoque
 
 * Diseño de sistemas de IA modulares
 * Pipelines end-to-end
@@ -240,7 +240,7 @@ Sistema basado en agentes inteligentes que automatiza la transformación de requ
 
 ---
 
-# 🔥 Valor
+#  Valor
 
 Este portafolio demuestra experiencia en:
 
@@ -253,7 +253,7 @@ Este portafolio demuestra experiencia en:
 
 ---
 
-## 📊 Siguientes mejoras sugeridas
+##  Siguientes mejoras sugeridas
 
 * Diagramas de arquitectura (C4 / UML)
 * Diagramas de flujo por proyecto
@@ -269,7 +269,7 @@ Si necesitas, puedo ayudarte a:
 * Preparar endpoints/API specs (OpenAPI/Swagger)
 
 
-# 👨‍💻 Autor
+#  Autor
 
 Radi Franco
 
