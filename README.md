@@ -18,7 +18,7 @@ El objetivo principal es demostrar la capacidad de diseñar, implementar y despl
 
 #  Proyectos
 
-## 🎙️ 1. Neural Text-to-Speech (Azure AI)
+##  1. Neural Text-to-Speech (Azure AI)
 
 Este proyecto implementa un sistema de síntesis de voz basado en modelos neuronales proporcionados por Azure Cognitive Services. El sistema permite transformar texto en audio con alta naturalidad, controlando aspectos como entonación, velocidad y estilo mediante SSML.
 
