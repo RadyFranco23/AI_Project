@@ -253,21 +253,6 @@ Este portafolio demuestra experiencia en:
 
 ---
 
-##  Siguientes mejoras sugeridas
-
-* Diagramas de arquitectura (C4 / UML)
-* Diagramas de flujo por proyecto
-* Ejemplos de uso (code snippets)
-* Benchmarks de rendimiento
-
----
-
-Si necesitas, puedo ayudarte a:
-
-* Generar diagramas (Mermaid, PlantUML)
-* Escribir ejemplos de código para cada módulo
-* Preparar endpoints/API specs (OpenAPI/Swagger)
-
 
 #  Autor
 
